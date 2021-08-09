@@ -1,0 +1,14 @@
+.App-header {
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-menu {
+  list-style: none;
+  text-align: center;
+  > li {
+    display: inline-block;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,48 @@
+.Todos-form {
+  position: relative;
+}
+
+.Todos-list {
+  list-style: none;
+}
+
+.Todos-list-item {
+  border: 1px solid #58728c;
+  font-size: 24px;
+  padding: 10px;
+  padding-right: 65px;
+  position: relative;
+}
+
+.Todos-remove-btn {
+  font-size: 18px;
+  padding: 5px 10px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Todos-input {
+  border: 1px solid #58728c;
+  padding: 10px;
+  padding-right: 110px;
+  width: 100%;
+}
+
+.Todos-submit-btn {
+  width: 100px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+}
+
+.Todos-empty {
+  padding: 20px 0;
+}
+
+.Todos-invalid {
+  color: tomato;
+  padding: 5px 0;
+}

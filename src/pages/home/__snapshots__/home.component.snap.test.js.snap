@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Snap Test should render correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="group"
+  >
+    <h1>
+      Homepage
+    </h1>
+  </div>
+  <div
+    className="group"
+  >
+    <h3>
+      useContext
+    </h3>
+    <p>
+      theme: 
+      
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Change Theme
+    </button>
+  </div>
+  <br />
+  <div
+    className="group"
+  >
+    <h3>
+      useState
+    </h3>
+    <p>
+      Count: 
+      1
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Add Count
+    </button>
+  </div>
+  <br />
+  <div
+    className="group"
+  >
+    <TodoListComponent />
+  </div>
+</div>
+`;
