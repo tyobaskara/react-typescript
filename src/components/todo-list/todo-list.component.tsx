@@ -3,24 +3,18 @@ import { TodosContext } from '../../contexts/todos.context';
 
 import './todo-list.styles.scss';
 
-interface todosInput {
-  target: {
-    value: string
-  }
-}
-
 const TodoList: FC = () => {
   const [ inputTodo, setInputTodo ] = useState<string>('');
   const [ inputInvalid, setInputInvalid ] = useState<string>('');
   const { todos, dispatchTodos } = useContext(TodosContext);
 
-  const _onInputChange = (e: todosInput) => {
-    setInputTodo(e.target.value);
+  const _onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputTodo(event.target.value);
     setInputInvalid('');
   };
 
-  const _onInputSubmit = (e: any) => {
-    e.preventDefault();
+  const _onInputSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
     if (inputTodo.trim()) {
       if (todos.includes(inputTodo)) {
