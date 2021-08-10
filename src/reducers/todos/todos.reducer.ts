@@ -1,21 +1,28 @@
-import { todosTypes } from './todos.types';
-
-type actionType = {
-  type: string,
+interface AddTodoAction {
+  type: 'ADD_TODO',
   payload: string
-};
+}
 
-type todosState = string[];
+interface RemoveTodoAction {
+  type: 'REMOVE_TODO',
+  payload: string
+}
+
+type ActionType = 
+  | AddTodoAction
+  | RemoveTodoAction;
+
+type TodosState = string[];
 
 export const initialState: string[] = [];
 export const initializer = (initialValue = initialState) =>
   JSON.parse(localStorage.getItem("localTodos") || '[]') || initialValue;
 
-export const TodosReducer = (state: todosState, action: actionType): todosState => {
+export const TodosReducer = (state: TodosState, action: ActionType): TodosState => {
   switch (action.type) {
-    case todosTypes.ADD_TODO:
+    case 'ADD_TODO':
       return [...state, action.payload]
-    case todosTypes.REMOVE_TODO:
+    case 'REMOVE_TODO':
       return state.filter(state => state !== action.payload)
     default:
       return state;
