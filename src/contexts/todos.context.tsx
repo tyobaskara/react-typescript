@@ -1,11 +1,11 @@
 import React, { useReducer, createContext, FC, useEffect } from 'react';
 
 import { initialState, initializer, TodosReducer} from '../reducers/todos/todos.reducer';
-import { ActionType } from '../reducers/todos/todos.actions';
+import { Action } from '../reducers/todos/todos.actions';
 
 interface TodosContextData {
   todos: string[];
-  dispatchTodos: React.Dispatch<ActionType>;
+  dispatchTodos: React.Dispatch<Action>;
 }
 
 export const TodosContext = createContext<TodosContextData>({

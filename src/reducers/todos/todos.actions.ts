@@ -10,7 +10,7 @@ interface RemoveTodoAction {
   payload: string
 }
 
-export type ActionType = 
+export type Action = 
   | AddTodoAction
   | RemoveTodoAction;
 
