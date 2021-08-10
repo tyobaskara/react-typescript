@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-from npx create-react-app react-typescript --template typescript
+from `npx create-react-app react-typescript --template typescript`
 
 - React Typescript
 - React Context, createContext, useContext
