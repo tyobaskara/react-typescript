@@ -1,6 +1,6 @@
 import React, { useReducer, createContext, FC, useEffect } from 'react';
 
-import { initialState, initializer, TodosReducer} from '../reducers/todos.reducer';
+import { initialState, initializer, TodosReducer} from '../reducers/todos/todos.reducer';
 
 type actionType = {
   type: string,

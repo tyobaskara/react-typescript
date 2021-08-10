@@ -1,5 +1,6 @@
 import { useState, useContext, FC} from 'react'
 import { TodosContext } from '../../contexts/todos.context';
+import { addTodoAction, removeTodoAction } from '../../reducers/todos/todos.actions';
 
 import './todo-list.styles.scss';
 
@@ -22,19 +23,13 @@ const TodoList: FC = () => {
       } else {
         setInputTodo('');
   
-        dispatchTodos({
-          type: 'ADD_TODO',
-          payload: inputTodo
-        })
+        dispatchTodos(addTodoAction(inputTodo));
       }
     }
   };
 
   const _onClickRemoveTodo = (todo: string) => () => {
-    dispatchTodos({
-      type: 'REMOVE_TODO',
-      payload: todo
-    })
+    dispatchTodos(removeTodoAction(inputTodo));
   };
 
   const _renderList = () => todos.length ? (
