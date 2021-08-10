@@ -29,7 +29,7 @@ const TodoList: FC = () => {
   };
 
   const _onClickRemoveTodo = (todo: string) => () => {
-    dispatchTodos(removeTodoAction(inputTodo));
+    dispatchTodos(removeTodoAction(todo));
   };
 
   const _renderList = () => todos.length ? (
